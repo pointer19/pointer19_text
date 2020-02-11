@@ -1,7 +1,7 @@
 nclude <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-   int main(void)
+   int main()
   {
           pid_t pid;
           int fd[2];

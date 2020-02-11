@@ -19,15 +19,13 @@ int main(int argc, char* argv[])
 		printf("child pid = %d\n",getpid());
 		printf("child gid = %d\n",getpgid(0));
 		printf("child sid = %d\n",getsid(0));
-		
-		sleep(10);
+		sleep(3);
 		setsid();
 		printf("changed:\n");
-
 		printf("child pid = %d\n",getpid());
 		printf("child gid = %d\n",getpgid(0));
 		printf("child sid = %d\n",getsid(0));
-		sleep(20);
+		sleep(6);
 	}
 
 	return 0;
