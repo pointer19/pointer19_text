@@ -7,7 +7,7 @@
 #include<arpa/inet.h>
 #include<fcntl.h>
 #define SER_PORT 8000
-#define SER_ADDR "192.168.44.1313131"
+#define SER_ADDR "192.168.44.131"
 #define BUF_SIZE 4096
 void sys_err(char *str)
 {
