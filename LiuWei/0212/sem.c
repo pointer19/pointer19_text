@@ -6,13 +6,14 @@
 #include <fcntl.h>
 #include <pthread.h>
 #include <semaphore.h>
-#define N 10
 
 void sys_err(char *str,int nu)
 {
     fprintf(stderr,"%s:%s\n",str,strerror(nu));
     exit(1);
 }
+
+#define N 10
 
 int arry[N]={0};
 
