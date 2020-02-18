@@ -11,7 +11,7 @@
 
 
 #define SER_PORT 8000
-#define SER_IP "192.168.19.144"
+#define SER_IP "127.0.0.1"
 
 void sys_err(char* str)
 {
@@ -72,6 +72,7 @@ int main(int argc, char* argv[])
 				{
 					continue;
 				}
+
 			}
 			for(i = lfd + 1;i < maxfd + 1;i++)
 			{
@@ -87,18 +88,22 @@ int main(int argc, char* argv[])
 						printf("client lost\n");
 						close(i);
 					
+						
 						FD_CLR(i,&aset);
 					}
 					else
 					{
 						
 						write(STDOUT_FILENO,buf,rr);
+					
 						write(i,buf,rr);
 					}
 					if(--sr == 0)
 					{
 						break;
+				
 					}
+				
 				}
 			}
 		}
